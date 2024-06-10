@@ -1,7 +1,7 @@
 {
   "name": "@keupoz/eslint-config",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "packageManager": "pnpm@9.1.1",
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
