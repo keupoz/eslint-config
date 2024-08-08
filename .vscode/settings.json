@@ -1,28 +1,3 @@
-# @keupoz/eslint-config
-
-[![NPM Version](https://img.shields.io/npm/v/@keupoz/eslint-config)](https://www.npmjs.com/package/@keupoz/eslint-config)
-
-Personal ESLint config based on [antfu's config](https://github.com/antfu/eslint-config).
-
-- Semi colons are enabled
-- Stricter bracket style disallowing braceless expressions hanging down
-- Import sorting is handled by Perfectionist with a consistent order
-- Union types sorting enabled (handled by Perfectionist)
-
-## Usage
-
-```javascript
-// eslint.config.mjs
-import keupoz from '@keupoz/eslint-config';
-
-export default keupoz({
-  // All original options are supported.
-  // `stylistic` and `rules` options are extended instead of being completely overriden.
-});
-```
-
-```jsonc
-// .vscode/settings.json
 {
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
@@ -74,4 +49,3 @@ export default keupoz({
     "postcss"
   ]
 }
-```
