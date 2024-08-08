@@ -1,5 +1,4 @@
 import antfu, { type OptionsConfig, type TypedFlatConfigItem } from '@antfu/eslint-config';
-import { defineTailwind } from './tailwind';
 
 type AntfuOptions = OptionsConfig & TypedFlatConfigItem;
 
@@ -27,14 +26,17 @@ export function defineConfig(options: ConfigOptions = {}): ReturnType<typeof ant
     formatters: true,
     isInEditor: false,
     rules: {
+      'antfu/curly': ['off'],
       'curly': ['error', 'all'],
+
       'style/brace-style': ['error', '1tbs'],
+
       'import/order': ['off'],
       'perfectionist/sort-imports': ['error', {
-        'type': 'natural',
-        'internal-pattern': importsInternalPattern,
-        'newlines-between': 'never',
-        'groups': [
+        type: 'natural',
+        internalPattern: importsInternalPattern,
+        newlinesBetween: 'never',
+        groups: [
           'type',
           ['builtin', 'external'],
           'internal-type',
@@ -46,9 +48,24 @@ export function defineConfig(options: ConfigOptions = {}): ReturnType<typeof ant
           'unknown',
         ],
       }],
+
       'perfectionist/sort-union-types': ['error', {
-        'type': 'natural',
-        'nullable-last': true,
+        type: 'natural',
+        groups: [
+          'conditional',
+          'function',
+          'import',
+          'intersection',
+          'keyword',
+          'literal',
+          'named',
+          'object',
+          'operator',
+          'tuple',
+          'union',
+          'nullish',
+          'unknown',
+        ],
       }],
       ...rules,
     },
