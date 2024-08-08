@@ -18,9 +18,6 @@
     "@eslint/eslintrc": "^3.1.0",
     "eslint-plugin-format": "^0.1.2"
   },
-  "optionalDependencies": {
-    "eslint-plugin-tailwindcss": "^3.17.4"
-  },
   "devDependencies": {
     "@total-typescript/tsconfig": "^1.0.4",
     "@types/eslint__eslintrc": "^2.1.2",

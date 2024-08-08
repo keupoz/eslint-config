@@ -72,9 +72,5 @@ export function defineConfig(options: ConfigOptions = {}): ReturnType<typeof ant
     ...overrides,
   });
 
-  if (tailwind) {
-    config.append(defineTailwind());
-  }
-
   return config;
 }
