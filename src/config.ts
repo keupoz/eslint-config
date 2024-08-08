@@ -8,13 +8,10 @@ export interface ConfigOptions extends Partial<AntfuOptions> {
    * @default []
    */
   importsInternalPattern?: string[];
-
-  /** Enable 'eslint-plugin-tailwindcss' plugin */
-  tailwind?: boolean;
 }
 
 export function defineConfig(options: ConfigOptions = {}): ReturnType<typeof antfu> {
-  const { importsInternalPattern = [], tailwind, stylistic, rules, ...overrides } = options;
+  const { importsInternalPattern = [], stylistic, rules, ...overrides } = options;
 
   const config = antfu({
     stylistic: typeof stylistic === 'boolean'
