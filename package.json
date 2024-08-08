@@ -10,7 +10,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsc && unbuild",
     "lint": "eslint ."
   },
   "dependencies": {
